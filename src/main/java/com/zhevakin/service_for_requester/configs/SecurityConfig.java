@@ -37,28 +37,4 @@ public class SecurityConfig {
                 ).build();
     }
 
-//
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.authorizeRequests()
-//                .antMatchers("/environments/**").authenticated()
-//                .antMatchers("/requests/**").authenticated()
-//                .and()
-//                .httpBasic();
-//    }
-
-
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
-//
-//    @Bean
-//    public DaoAuthenticationProvider daoAuthenticationProvider() {
-//        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider() ;
-//        authenticationProvider.setPasswordEncoder(passwordEncoder());
-//        //authenticationProvider.setUserDetailsService();
-//        return authenticationProvider;
-//
-//    }
-
 }

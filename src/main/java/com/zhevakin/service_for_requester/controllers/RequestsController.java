@@ -1,6 +1,5 @@
 package com.zhevakin.service_for_requester.controllers;
 
-import com.zhevakin.service_for_requester.models.Environment;
 import com.zhevakin.service_for_requester.models.RequestInfo;
 import com.zhevakin.service_for_requester.models.domain.Group;
 import com.zhevakin.service_for_requester.models.domain.Role;
