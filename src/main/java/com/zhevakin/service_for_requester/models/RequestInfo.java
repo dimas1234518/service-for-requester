@@ -11,10 +11,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Getter
 @Setter
@@ -29,8 +26,13 @@ public class RequestInfo{
     private TypeRequest typeRequest;
     private String request;
     private String parent;
-    //private final String fullRequest;
     private TypeAuthorization typeAuthorization;
+    @ElementCollection // this is a collection of primitives
+    @MapKeyColumn(name = "key") // column name for map "key"
+    @Column(name = "value") // column name for map "value"
+    @CollectionTable(name = "headers", joinColumns = @JoinColumn(name = "requests_id"))
+    private Map<String, String> headers;
+//    //private final String fullRequest;
     @Column(length = 2048)
     private String authToken;
     private String body;
